@@ -2,7 +2,18 @@ import './index.css'
 
 const PasswordList = props => {
   const {eachItem, showPass, onDeletePassword} = props
-  const {id, enterWebsite1, enterUsername1, enterPassword1} = eachItem
+  const {id, enterWebsite1, enterUsername1, enterPassword1,selectColor1} = eachItem
+  
+  const colors = [
+    'color1',
+    'color2',
+    'color3',
+    'color4',
+    'color5',
+    'color6',
+    'color7',
+  ]
+  const selectedColor = colors[selectColor1]
 
   const deleteItem = () => {
     onDeletePassword(id)
@@ -12,7 +23,7 @@ const PasswordList = props => {
     <li className="list-container">
       <div className="container">
         <div className="word-container">
-          <span className="first-letter">{enterWebsite1[0].toUpperCase()}</span>
+          <span className={`${selectedColor} first-letter`}>{enterWebsite1[0].toUpperCase()}</span>
         </div>
         <div>
           <p className="website">{enterWebsite1}</p>
