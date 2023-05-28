@@ -32,6 +32,7 @@ class Passwords extends Component {
       enterWebsite: '',
       enterUsername: '',
       enterPassword: '',
+      selectColor1:selectColor,
     }))
   }
 
