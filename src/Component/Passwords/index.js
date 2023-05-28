@@ -18,6 +18,8 @@ class Passwords extends Component {
   AddPassword = event => {
     event.preventDefault()
     const {enterWebsite, enterUsername, enterPassword} = this.state
+    
+    const selectColor = Math.ceil(Math.random() * 7)
 
     const PasswordItems = {
       id: v4(),
